@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#0b1220"><meta name="description" content="CyberWatch, votre tableau de bord de veille cybersécurité et technologique.">
+  <link rel="manifest" href="./manifest.webmanifest"><link rel="icon" href="./assets/icon-192.png">
+  <link rel="stylesheet" href="./assets/styles.css"><title>CyberWatch — Veille Cyber & Tech</title>
+</head>
+<body>
+  <div class="layout">
+    <aside class="sidebar">
+      <a class="brand" href="./"><span class="brand-icon">⬡</span><span>CYBER<span class="accent">WATCH</span><small>INTELLIGENCE HUB</small></span></a>
+      <p class="nav-caption">EXPLORER</p>
+      <nav id="navigation" aria-label="Rubriques"></nav>
+      <div class="sidebar-foot"><span class="live-dot"></span> Actualisation toutes les 6 h <p>Veille personnelle · GitHub Pages</p></div>
+    </aside>
+    <main class="main">
+      <header class="topbar"><div class="mobile-brand">⬡ <b>CYBER<span class="accent">WATCH</span></b></div><div class="top-subtitle">LE MONDE CYBER & TECH, EN UN SEUL ENDROIT</div><div class="top-actions"><button id="themeBtn" class="icon-btn" type="button" aria-label="Changer le thème">☾</button><button id="refreshBtn" class="icon-btn" type="button" aria-label="Actualiser">↻</button></div></header>
+      <div class="content">
+        <section class="intro"><div><div class="eyebrow"><span class="live-dot"></span> CYBER INTELLIGENCE / LIVE FEED</div><h1>Votre veille. <span class="gradient">Sans limites.</span></h1><p>Les attaques, les vulnérabilités et les innovations qui façonnent la technologie. Toutes les informations au même endroit.</p></div><div class="update-box"><span>DERNIÈRE ACTUALISATION</span><strong id="updated">En attente</strong><small>Collecte automatique toutes les 6 h</small></div></section>
+        <section class="metrics" aria-label="Statistiques"><div class="metric"><span>ARTICLES COLLECTÉS</span><strong id="total">—</strong><small>Toutes les sources</small></div><div class="metric"><span>CYBERATTAQUES</span><strong id="attacks">—</strong><small>Articles suivis</small></div><div class="metric"><span>ALERTES & CVE</span><strong id="cves">—</strong><small>Avis et vulnérabilités</small></div><div class="metric"><span>SOURCES</span><strong id="sources">—</strong><small>Flux RSS et API</small></div></section>
+        <section class="feed-header"><div><div class="eyebrow">THE INTELLIGENCE FEED</div><h2 id="sectionTitle">Toutes les actualités</h2><p id="sectionText">Explore les publications et découvre ce qui compte.</p></div><div class="toolbar"><label class="search"><span>⌕</span><input id="search" type="search" placeholder="Rechercher : CVE, IA, attaque..." aria-label="Rechercher un article"></label><select id="sort" aria-label="Trier"><option value="newest">Plus récent</option><option value="oldest">Plus ancien</option><option value="source">Par source</option></select></div></section>
+        <div class="filter-row"><div class="chips" id="chips"></div><label class="language-switch"><input type="checkbox" id="frenchOnly"> Résumés en français</label></div>
+        <div id="status" class="status" role="status"></div>
+        <section id="articles" class="articles" aria-live="polite"></section>
+        <div class="load-wrapper"><button id="loadMore" class="load-more" hidden>Afficher plus d'articles ↓</button></div>
+        <footer>CYBERWATCH · Sources originales créditées · Les informations sont indicatives et doivent être vérifiées à la source.</footer>
+      </div>
+    </main>
+  </div>
+  <nav class="mobile-nav" id="mobileNav" aria-label="Navigation mobile"></nav>
+  <script src="./assets/app.js" defer></script>
+</body>
+</html>
